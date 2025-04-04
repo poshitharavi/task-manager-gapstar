@@ -1,9 +1,11 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 interface AuthCardProps {
   title: string;
   subtitle: string;
   subtitleAction: string;
+  subtitleActionLinkTo: string;
   children: ReactNode;
   buttonText: string;
   onSubmit: (e: React.FormEvent) => Promise<void>;
@@ -13,6 +15,7 @@ const AuthCard = ({
   title,
   subtitle,
   subtitleAction,
+  subtitleActionLinkTo,
   children,
   buttonText,
   onSubmit,
@@ -24,7 +27,13 @@ const AuthCard = ({
         <h1 className="text-lg md:text-xl font-semibold">{title}</h1>
         <p className="text-xs md:text-sm text-gray-500 text-center">
           {subtitle}{" "}
-          <span className="text-white cursor-pointer">{subtitleAction}</span>
+          <Link
+            onClick={() => console.log("aa")}
+            to={subtitleActionLinkTo}
+            className="text-white cursor-pointer"
+          >
+            {subtitleAction}
+          </Link>
         </p>
 
         <div className="w-full flex flex-col gap-3">

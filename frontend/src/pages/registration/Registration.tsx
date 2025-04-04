@@ -51,6 +51,7 @@ const Registration = () => {
       title="Create Account"
       subtitle="Already have an account?"
       subtitleAction="Sign in"
+      subtitleActionLinkTo="/login"
       buttonText={isLoading ? "Registering..." : "Register"}
       onSubmit={handleRegister}
     >

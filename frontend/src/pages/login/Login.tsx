@@ -38,6 +38,7 @@ const Login = () => {
       title="Welcome Back"
       subtitle="Don't have an account?"
       subtitleAction="Sign up"
+      subtitleActionLinkTo="/register"
       buttonText={isLoading ? "Logging in..." : "Login"}
       onSubmit={handleLogin}
     >
@@ -63,6 +64,10 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+        <div className="mt-4 text-center text-gray-500">
+          Demo Account
+          <div className="text-sm">adam / password</div>
+        </div>
       </form>
     </AuthCard>
   );
