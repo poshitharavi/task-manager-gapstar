@@ -37,8 +37,8 @@ To get the Task Manager application running on your local machine, follow these 
 
 Once the Docker containers are up and running, you can access the application at the following addresses:
 
-- **Frontend:** [http://localhost](http://localhost) (or the port specified in your frontend Dockerfile/configuration)
-- **Backend API Documentation (Swagger):** [http://localhost:<backend_port>/api](http://localhost:<backend_port>/api) _(Replace `<backend_port>` with the port your NestJS application is exposed on. This is usually defined in your `docker-compose.yml` or NestJS configuration.)_
+- **Login:** [http://localhost/](http://localhost/)
+- **API Documentation (Swagger):** [http://localhost:3000/api-documentation](http://localhost:3000/api-documentation)
 
 ## Stopping and Removing Containers
 
